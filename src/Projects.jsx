@@ -23,6 +23,12 @@ function Projects(props) {
         title="Twitter Newsfeed"
         category="Mobile App"
       />
+      <Thumbnail
+        link="/twitter"
+        image="http://twitter-image-url.jpg"
+        title="Twitter Newsfeed"
+        category="Mobile App"
+      />
     </div>
   );
 }
