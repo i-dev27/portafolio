@@ -3,32 +3,9 @@ import Thumbnail from "./Thumbnail";
 
 function Projects(props) {
   return (
-    <div>
-      <h1>Projects</h1>
-      <Thumbnail
-        link="/twitter"
-        image="http://twitter-image-url.jpg"
-        title="Twitter Newsfeed"
-        category="Mobile App"
-      />
-      <Thumbnail
-        link="/twitter"
-        image="http://twitter-image-url.jpg"
-        title="Twitter Newsfeed"
-        category="Mobile App"
-      />
-      <Thumbnail
-        link="/twitter"
-        image="http://twitter-image-url.jpg"
-        title="Twitter Newsfeed"
-        category="Mobile App"
-      />
-      <Thumbnail
-        link="/twitter"
-        image="http://twitter-image-url.jpg"
-        title="Twitter Newsfeed"
-        category="Mobile App"
-      />
+    <div className="projects-area">
+      <h1 className="projects-title">"I" Solutions!</h1>
+      
     </div>
   );
 }
