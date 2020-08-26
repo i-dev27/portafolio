@@ -1,10 +1,10 @@
 import React from "react";
 
-import Projects from "./Projects.jsx";
-import Articles from "./Articles.jsx";
+import Projects from "./components/Projects.jsx";
+import Articles from "./components/Articles.jsx";
 import "./App.css";
 import { Link, BrowserRouter, Route } from "react-router-dom";
-import About from "./About.jsx";
+import About from "./components/About.jsx";
 
 function App() {
   return (
