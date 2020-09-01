@@ -24,3 +24,8 @@ h1.title {
   display: flex;
   justify-content: center;
 }
+
+.MuiCard-root {
+  width: 800px;
+  padding-top: 3em;
+}
