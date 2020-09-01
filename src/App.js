@@ -1,5 +1,4 @@
 import React from "react";
-
 import Projects from "./components/Projects.jsx";
 import Articles from "./components/Articles.jsx";
 import "./App.css";
