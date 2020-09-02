@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Grid } from "@material-ui/core";
 
-function About(props) {
+function Contact(props) {
   return (
     <div className="about-title">
       <Grid
@@ -34,4 +34,4 @@ function About(props) {
   );
 }
 
-export default About;
+export default Contact;

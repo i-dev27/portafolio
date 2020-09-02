@@ -1,9 +1,9 @@
 import React from "react";
 import Projects from "./components/Projects.jsx";
-import Articles from "./components/Articles.jsx";
+import Agency from "./components/Agency.jsx";
 import "./App.css";
 import { Link, BrowserRouter, Route } from "react-router-dom";
-import About from "./components/About.jsx";
+import Contact from "./components/Contact.jsx";
 
 function App() {
   return (
@@ -15,18 +15,18 @@ function App() {
             Projects
           </Link>
 
-          <Link to="/articles" className="item">
-            Articles
+          <Link to="/Agency" className="item">
+            Agency
           </Link>
-          <Link to="/about" className="item">
-            About
+          <Link to="/Contact" className="item">
+            Contact
           </Link>
         </div>
       </div>
       <div className="App">
         <Route exact path="/" component={Projects} />
-        <Route path="/articles" component={Articles} />
-        <Route path="/about" component={About} />
+        <Route path="/Agency" component={Agency} />
+        <Route path="/Contact" component={Contact} />
       </div>
     </BrowserRouter>
   );

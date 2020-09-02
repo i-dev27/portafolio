@@ -16,6 +16,8 @@ div.navigation-sub {
 }
 
 h1.projects-title {
+  padding-top: 120px;
+  margin-top: 20px;
   display: flex;
   justify-content: center;
 }

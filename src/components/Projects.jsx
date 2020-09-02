@@ -13,7 +13,10 @@ export default function Projects() {
     <div className="projects-area">
       <Container fixed>
         <Bounce>
-          <h1 className="projects-title">"My-Projects"</h1>
+          <h1 className="projects-title">
+            "My Name is Irving R. and I am Software Developer <br /> I've been
+            in this fiel for 5 months and I am also a creative director "
+          </h1>
         </Bounce>
 
         <Grid spacing={1} container justify="flex-end" alignItems="center">
