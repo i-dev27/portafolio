@@ -1,5 +1,6 @@
 import React from "react";
 import { Avatar } from "@material-ui/core";
+import Logo from "Logo.jsx";
 import { Grid, Container } from "@material-ui/core";
 import styled, { keyframes } from "styled-components";
 import { bounceIn } from "react-animations";
@@ -15,7 +16,8 @@ export default function Projects() {
         <Bounce>
           <h1 className="projects-title">
             "My Name is Irving R. and I am Software Developer <br /> I've been
-            in this fiel for 5 months and I am also a creative director "
+            in this field for 5 months. <br /> I am also a creative content
+            marketing director "
           </h1>
         </Bounce>
 
@@ -26,6 +28,7 @@ export default function Projects() {
             </Bounce>
           </Grid>
         </Grid>
+        <Logo />
       </Container>
     </div>
   );
