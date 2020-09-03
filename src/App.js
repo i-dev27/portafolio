@@ -9,8 +9,12 @@ function App() {
   return (
     <BrowserRouter>
       <div className="navigation">
-        {/* <img src={logo} alt="Logo Image" className="logo" /> */}
         <div className="navigation-sub">
+          <img
+            src="./images/Logo-Isolutions.svg"
+            alt="Logo Image"
+            className="logo"
+          />
           <Link to="/" className="item">
             Projects
           </Link>

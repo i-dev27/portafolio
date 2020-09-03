@@ -1,6 +1,6 @@
 import React from "react";
 import { Avatar } from "@material-ui/core";
-import Logo from "Logo.jsx";
+
 import { Grid, Container } from "@material-ui/core";
 import styled, { keyframes } from "styled-components";
 import { bounceIn } from "react-animations";
@@ -28,7 +28,7 @@ export default function Projects() {
             </Bounce>
           </Grid>
         </Grid>
-        <Logo />
+        
       </Container>
     </div>
   );
