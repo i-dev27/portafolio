@@ -58,39 +58,54 @@ export default function Projects() {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2010 - 2011"
+            date="2020 - 2020"
             iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
           >
-            <h3 className="vertical-timeline-element-title">Art Director</h3>
+            <h3 className="vertical-timeline-element-title">
+              Promoter and Video Business Creation of Sistema by OG
+            </h3>
             <h4 className="vertical-timeline-element-subtitle">
-              San Francisco, CA
+              Antigua Guatemala
             </h4>
             <p>
-              Creative Direction, User Experience, Visual Design, SEO, Online
-              Marketing
+              Tener la oportunidad que mis clientes tengan la confianza
+              depositar su marca para promocionarlos en un gran previlegio el
+              cual me permite aplicar mis habilidades para poder llevar su marca
+              al siguiente nivel.
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2008 - 2010"
+            date="2020 - 2020"
             iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
           >
-            <h3 className="vertical-timeline-element-title">Web Designer</h3>
+            <h3 className="vertical-timeline-element-title">
+              Front-End Development Mishopin
+            </h3>
             <h4 className="vertical-timeline-element-subtitle">
-              Los Angeles, CA
+              Antigua Guatemala
             </h4>
-            <p>User Experience, Visual Design</p>
+            <p>
+              Creacion de Features y Componentes utilizando la tecnologia mas
+              popular en el mercado tecnologico creado por Facebook "React.js"{" "}
+            </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2006 - 2008"
+            date="2009 - 2020"
             iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
           >
-            <h3 className="vertical-timeline-element-title">Web Designer</h3>
+            <h3 className="vertical-timeline-element-title">
+              Manager of Hostel Maison Bougainvillea{" "}
+            </h3>
             <h4 className="vertical-timeline-element-subtitle">
-              San Francisco, CA
+              Antigua Guatemala
             </h4>
-            <p>User Experience, Visual Design</p>
+            <p>
+              Marketing Manager y Director Creativo de Marca, logrando
+              posicionamiento internacional durante 10 años de experiencia en
+              manejo de Social Media y creacion de audiencia.
+            </p>
           </VerticalTimelineElement>
         </VerticalTimeline>
       </Container>
