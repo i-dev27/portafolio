@@ -1,5 +1,5 @@
 import React from "react";
-import { Avatar } from "@material-ui/core";
+import { Avatar, makeStyles } from "@material-ui/core";
 import { Grid, Container } from "@material-ui/core";
 import styled, { keyframes } from "styled-components";
 import { bounceIn } from "react-animations";
@@ -8,28 +8,50 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import BackupIcon from "@material-ui/icons/Backup";
+import InsertEmoticonTwoToneIcon from "@material-ui/icons/InsertEmoticonTwoTone";
+import VideocamTwoToneIcon from "@material-ui/icons/VideocamTwoTone";
+import CodeTwoToneIcon from "@material-ui/icons/CodeTwoTone";
+import CardTravelTwoToneIcon from "@material-ui/icons/CardTravelTwoTone";
 
 const Bounce = styled.div`
   animation: 5s ${keyframes`${bounceIn}`} infinite;
 `;
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+    "& > .fa": {
+      margin: theme.spacing(2),
+    },
+  },
+  large: {
+    width: theme.spacing(7),
+    height: theme.spacing(7),
+  },
+}));
+
 export default function Projects() {
+  const classes = useStyles();
   return (
     <div className="projects-area">
       <Container fixed>
         <Bounce>
           <h1 className="projects-title">
-            "My Name is Irving R. and I am Software Developer <br /> I've been
-            in this field for 5 months. <br /> I am also a creative content
-            marketing director "
+            "Mi nombre es Irving Rabanales y soy Software Developer <br /> Llevo
+            1 año en el desarrollo de Web-Apps para comercios 100%
+            personalizadas
+            <br /> Y tengo la experiencia de 10 años en Marketing Digital
+            utilizando todas las tecnologias relevantes del mercado.
           </h1>
         </Bounce>
 
         <Grid spacing={1} container justify="flex-end" alignItems="center">
           <Grid item xs={1}>
             <Bounce>
-              <Avatar alt="Irving Morales" src="./images/avatar.jpg" />
+              <Avatar
+                alt="Irving Morales"
+                src="./images/avatar.jpg"
+                className={classes.large}
+              />
             </Bounce>
           </Grid>
         </Grid>
@@ -37,35 +59,54 @@ export default function Projects() {
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{
-              background: "rgb(33, 150, 243)",
+              background: "rgb(169,169,169)",
               color: "#fff",
             }}
             contentArrowStyle={{
-              borderRight: "7px solid  rgb(33, 150, 243)",
+              borderRight: "7px solid  rgb(105, 105, 105)",
             }}
             date="2011 - present"
-            iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-            icon={<BackupIcon />}
+            iconStyle={{
+              background: "radial-gradient(#DCDCDC, #000000)",
+              boxShadow:
+                "0 0 0 4px #0f0f0f,inset 0 2px 0 rgba(0,0,0,.08),0 3px 0 4px rgba(0,0,0,.05)",
+              color: "#fff",
+            }}
+            icon={<InsertEmoticonTwoToneIcon fontSize="large" />}
           >
-            <h3 className="vertical-timeline-element-title">
-              Creative Director
-            </h3>
-            <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
+            <h3 className="vertical-timeline-element-title">Digital Creator</h3>
+            <h4 className="vertical-timeline-element-subtitle">
+              Antigua Guatemala, Sacatepequez
+            </h4>
             <p>
-              Creative Direction, User Experience, Visual Design, Project
-              Management, Team Leading
+              Te Ofrezco los mejores servicios de tecnologia, desde la creacion
+              de tu sitio Web, WebApp, Marketing digital, Manejo de
+              Redes-Sociales todo 100% personalizado.
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
+            contentStyle={{
+              background: "rgb(105, 105, 105)",
+              color: "#fff",
+            }}
+            contentArrowStyle={{
+              borderRight: "7px solid  rgb(105, 105, 105)",
+            }}
             date="2020 - 2020"
-            iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+            iconStyle={{
+              background: "radial-gradient(#DCDCDC, #000000)",
+              boxShadow:
+                "0 0 0 4px #0f0f0f,inset 0 2px 0 rgba(0,0,0,.08),0 3px 0 4px rgba(0,0,0,.05)",
+              color: "#fff",
+            }}
+            icon={<VideocamTwoToneIcon />}
           >
             <h3 className="vertical-timeline-element-title">
-              Promoter and Video Business Creation of Sistema by OG
+              Marketing Promoter and Video Business Creation of Sistema by OG!
             </h3>
             <h4 className="vertical-timeline-element-subtitle">
-              Antigua Guatemala
+              Antigua Guatemala,Sacatepequez.
             </h4>
             <p>
               Tener la oportunidad que mis clientes tengan la confianza
@@ -76,11 +117,24 @@ export default function Projects() {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
+            contentStyle={{
+              background: "rgb(169,169,169",
+              color: "#fff",
+            }}
+            contentArrowStyle={{
+              borderRight: "7px solid  rgb(105, 105, 105)",
+            }}
             date="2020 - 2020"
-            iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+            iconStyle={{
+              background: "radial-gradient(#DCDCDC, #000000)",
+              boxShadow:
+                "0 0 0 4px #0f0f0f,inset 0 2px 0 rgba(0,0,0,.08),0 3px 0 4px rgba(0,0,0,.05)",
+              color: "#fff",
+            }}
+            icon={<CodeTwoToneIcon />}
           >
             <h3 className="vertical-timeline-element-title">
-              Front-End Development Mishopin
+              Development at Mishopin Store
             </h3>
             <h4 className="vertical-timeline-element-subtitle">
               Antigua Guatemala
@@ -92,8 +146,21 @@ export default function Projects() {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
+            contentStyle={{
+              background: "rgb(169,169,169",
+              color: "#fff",
+            }}
+            contentArrowStyle={{
+              borderRight: "7px solid  rgb(105, 105, 105)",
+            }}
             date="2009 - 2020"
-            iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+            iconStyle={{
+              background: "radial-gradient(#DCDCDC, #000000)",
+              boxShadow:
+                "0 0 0 4px #0f0f0f,inset 0 2px 0 rgba(0,0,0,.08),0 3px 0 4px rgba(0,0,0,.05)",
+              color: "#fff",
+            }}
+            icon={<CardTravelTwoToneIcon />}
           >
             <h3 className="vertical-timeline-element-title">
               Manager of Hostel Maison Bougainvillea{" "}
