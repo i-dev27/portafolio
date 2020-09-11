@@ -1,7 +1,7 @@
 import React from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import Styled from "styled-components";
+import styled from "styled-components";
 
 const UserForm = (props) => {
   const {
@@ -54,7 +54,23 @@ function ErrorsDisplay({ errors, passwordErrors }) {
       </React.Fragment>
     );
   } else if (!passwordErrors) {
+    errorsDisplay = (
+      <React.Fragment>
+        <ValidationLabel>Errors:</ValidationLabel>
+        <ValidationUl>{<li>Password must match</li>}</ValidationUl>
+      </React.Fragment>
+    );
   }
+  return errorsDisplay;
 }
+
+const ValidationUl = styled.div`
+  color: red;
+  padding: 15px 0 40px 10px;
+`;
+const ValidationLabel = styled.h2`
+  color: "0069c0";
+  font-size: 28px;
+`;
 
 export default UserForm;

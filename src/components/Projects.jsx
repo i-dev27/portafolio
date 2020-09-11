@@ -1,4 +1,7 @@
 import React from "react";
+
+import UserForm from "./components/UserForm.jsx";
+import Form from "react-bootstrap/Form";
 import { Avatar, makeStyles } from "@material-ui/core";
 import { Grid, Container } from "@material-ui/core";
 import styled, { keyframes } from "styled-components";
@@ -176,6 +179,36 @@ export default function Projects() {
           </VerticalTimelineElement>
         </VerticalTimeline>
       </Container>
+
+      <UserForm
+        cancel={this.cancel}
+        errors={this.errors}
+        submit={this.submit}
+        passwordErrors={this.confirmed}
+        submitButtonText="Sign-in"
+        elements={() => (
+          <React.Fragment>
+            <Form.Group controlId="formBasicEmail">
+              <Form.Control
+                type="email"
+                name="email"
+                value={this.email}
+                placeholder="isolutions@gmail.com"
+                onChange={this.change}
+              />
+            </Form.Group>
+            <Form.Group controlId="formBasicPassword">
+              <Form.Control
+                type="password"
+                name="password"
+                value={this.password}
+                placeholder="password"
+                onChange={this.change}
+              />
+            </Form.Group>
+          </React.Fragment>
+        )}
+      />
     </div>
   );
 }
