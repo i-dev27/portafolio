@@ -14,7 +14,7 @@ import CodeTwoToneIcon from "@material-ui/icons/CodeTwoTone";
 import CardTravelTwoToneIcon from "@material-ui/icons/CardTravelTwoTone";
 
 const Bounce = styled.div`
-  animation: 5s ${keyframes`${bounceIn}`} infinite;
+  animation: 5s ${keyframes`${bounceIn}`} 5s;
 `;
 
 const useStyles = makeStyles((theme) => ({
