@@ -1,6 +1,5 @@
 import React from "react";
-
-import UserForm from "./components/UserForm.jsx";
+import UserForm from "../src/components/UserForm.jsx";
 import Form from "react-bootstrap/Form";
 import { Avatar, makeStyles } from "@material-ui/core";
 import { Grid, Container } from "@material-ui/core";

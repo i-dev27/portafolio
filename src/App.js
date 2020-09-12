@@ -9,13 +9,15 @@ import Contact from "./components/Contact.jsx";
 function App() {
   return (
     <BrowserRouter>
+      <div className="Logo">
+        <img
+          src="./images/Logo-Isolutions.svg"
+          alt="Logo Image"
+          className="logo"
+        />
+      </div>
       <div className="navigation">
         <div className="navigation-sub">
-          <img
-            src="./images/Logo-Isolutions.svg"
-            alt="Logo Image"
-            className="logo"
-          />
           <Link to="/" className="item">
             Projects
           </Link>
