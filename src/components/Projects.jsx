@@ -1,6 +1,6 @@
 import React from "react";
-import UserForm from "../src/components/UserForm.jsx";
-import Form from "react-bootstrap/Form";
+// import UserForm from "./components/UserForm.jsx";
+// import Form from "react-bootstrap/Form";
 import { Avatar, makeStyles } from "@material-ui/core";
 import { Grid, Container } from "@material-ui/core";
 import styled, { keyframes } from "styled-components";
@@ -61,7 +61,7 @@ export default function Projects() {
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{
-              background: "rgb(169,169,169)",
+              background: "#00a86b",
               color: "#fff",
             }}
             contentArrowStyle={{
@@ -69,7 +69,7 @@ export default function Projects() {
             }}
             date="2011 - present"
             iconStyle={{
-              background: "radial-gradient(#DCDCDC, #000000)",
+              background: "radial-gradient(#00a86b, #000000)",
               boxShadow:
                 "0 0 0 4px #0f0f0f,inset 0 2px 0 rgba(0,0,0,.08),0 3px 0 4px rgba(0,0,0,.05)",
               color: "#fff",
@@ -97,7 +97,7 @@ export default function Projects() {
             }}
             date="2020 - 2020"
             iconStyle={{
-              background: "radial-gradient(#DCDCDC, #000000)",
+              background: "radial-gradient(#00a86b, #000000)",
               boxShadow:
                 "0 0 0 4px #0f0f0f,inset 0 2px 0 rgba(0,0,0,.08),0 3px 0 4px rgba(0,0,0,.05)",
               color: "#fff",
@@ -128,7 +128,7 @@ export default function Projects() {
             }}
             date="2020 - 2020"
             iconStyle={{
-              background: "radial-gradient(#DCDCDC, #000000)",
+              background: "radial-gradient(#00a86b, #000000)",
               boxShadow:
                 "0 0 0 4px #0f0f0f,inset 0 2px 0 rgba(0,0,0,.08),0 3px 0 4px rgba(0,0,0,.05)",
               color: "#fff",
@@ -157,7 +157,7 @@ export default function Projects() {
             }}
             date="2009 - 2020"
             iconStyle={{
-              background: "radial-gradient(#DCDCDC, #000000)",
+              background: "radial-gradient(#00a86b, #000000)",
               boxShadow:
                 "0 0 0 4px #0f0f0f,inset 0 2px 0 rgba(0,0,0,.08),0 3px 0 4px rgba(0,0,0,.05)",
               color: "#fff",
@@ -179,7 +179,7 @@ export default function Projects() {
         </VerticalTimeline>
       </Container>
 
-      <UserForm
+      {/* <UserForm
         cancel={this.cancel}
         errors={this.errors}
         submit={this.submit}
@@ -207,7 +207,7 @@ export default function Projects() {
             </Form.Group>
           </React.Fragment>
         )}
-      />
+      /> */}
     </div>
   );
 }
