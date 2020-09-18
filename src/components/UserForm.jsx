@@ -1,76 +1,48 @@
 import React from "react";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import styled from "styled-components";
+import { makeStyles } from "@material-ui/core/styles";
+import Input from "@material-ui/core/Input";
+import InputLabel from "@material-ui/core/InputLabel";
+import InputAdornment from "@material-ui/core/InputAdornment";
+import FormControl from "@material-ui/core/FormControl";
+import TextField from "@material-ui/core/TextField";
+import AccountCircle from "@material-ui/icons/AccountCircle";
+import AlternateEmailIcon from "@material-ui/icons/AlternateEmail";
 
-const UserForm = (props) => {
-  const {
-    cancel,
-    errors,
-    submit,
-    submitButtonText,
-    elements,
-    passwordErrors,
-  } = props;
+const useStyles = makeStyles((theme) => ({
+  margin: {
+    margin: theme.spacing(5),
+  },
+}));
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    submit();
-  }
-
-  function handleCancel(event) {
-    event.preventDefault();
-    cancel();
-  }
+export default function UserForm() {
+  const classes = useStyles();
 
   return (
-    <React.Fragment>
-      <ErrorsDisplay errors={errors} passwordErrors={passwordErrors} />
-      <Form onSubmit={handleSubmit}>
-        {elements()}
-        <Button className="mr-1" variant="primary" type="submit">
-          {submitButtonText}
-        </Button>
-        <Button className="mr-1" variant="secondary" onClick={handleCancel}>
-          Cancel
-        </Button>
-      </Form>
-    </React.Fragment>
+    <div>
+      <FormControl className={classes.margin}>
+        <InputLabel htmlFor="input-with-icon-adornment">Nombre</InputLabel>
+        <Input
+          id="input-with-icon-adornment"
+          startAdornment={
+            <InputAdornment position="start">
+              <AccountCircle />
+            </InputAdornment>
+          }
+        />
+      </FormControl>
+      <TextField
+        className={classes.margin}
+        id="input-with-icon-textfield"
+        label="Email"
+        InputProps={{
+          startAdornment: (
+            <InputAdornment position="start">
+              <AlternateEmailIcon />
+            </InputAdornment>
+          ),
+        }}
+      />
+      
+    </div>
   );
-};
-
-function ErrorsDisplay({ errors, passwordErrors }) {
-  let errorsDisplay = null;
-
-  if (errors.lenght) {
-    errorsDisplay = (
-      <React.Fragment>
-        <ValidationLabel>Errors:</ValidationLabel>
-        <ValidationUl>
-          {errors.map((error, i) => (
-            <li key={i}>{errors}</li>
-          ))}
-        </ValidationUl>
-      </React.Fragment>
-    );
-  } else if (!passwordErrors) {
-    errorsDisplay = (
-      <React.Fragment>
-        <ValidationLabel>Errors:</ValidationLabel>
-        <ValidationUl>{<li>Password must match</li>}</ValidationUl>
-      </React.Fragment>
-    );
-  }
-  return errorsDisplay;
 }
-
-const ValidationUl = styled.div`
-  color: red;
-  padding: 15px 0 40px 10px;
-`;
-const ValidationLabel = styled.h2`
-  color: "0069c0";
-  font-size: 28px;
-`;
-
-export default UserForm;

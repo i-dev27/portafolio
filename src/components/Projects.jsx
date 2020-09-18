@@ -1,6 +1,6 @@
 import React from "react";
-// import UserForm from "./components/UserForm.jsx";
-// import Form from "react-bootstrap/Form";
+import UserForm from "./UserForm.jsx";
+
 import { Avatar, makeStyles } from "@material-ui/core";
 import { Grid, Container } from "@material-ui/core";
 import styled, { keyframes } from "styled-components";
@@ -11,9 +11,12 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import InsertEmoticonTwoToneIcon from "@material-ui/icons/InsertEmoticonTwoTone";
+import TextField from "@material-ui/core/TextField";
 import VideocamTwoToneIcon from "@material-ui/icons/VideocamTwoTone";
 import CodeTwoToneIcon from "@material-ui/icons/CodeTwoTone";
 import CardTravelTwoToneIcon from "@material-ui/icons/CardTravelTwoTone";
+import Button from "@material-ui/core/Button";
+import Icon from "@material-ui/core/Icon";
 
 const Bounce = styled.div`
   animation: 5s ${keyframes`${bounceIn}`} 5s;
@@ -179,35 +182,28 @@ export default function Projects() {
         </VerticalTimeline>
       </Container>
 
-      {/* <UserForm
-        cancel={this.cancel}
-        errors={this.errors}
-        submit={this.submit}
-        passwordErrors={this.confirmed}
-        submitButtonText="Sign-in"
-        elements={() => (
-          <React.Fragment>
-            <Form.Group controlId="formBasicEmail">
-              <Form.Control
-                type="email"
-                name="email"
-                value={this.email}
-                placeholder="isolutions@gmail.com"
-                onChange={this.change}
-              />
-            </Form.Group>
-            <Form.Group controlId="formBasicPassword">
-              <Form.Control
-                type="password"
-                name="password"
-                value={this.password}
-                placeholder="password"
-                onChange={this.change}
-              />
-            </Form.Group>
-          </React.Fragment>
-        )}
-      /> */}
+      <Container>
+        <Grid spacing={9} container justify="center" alignItems="center">
+          <Grid item xs={0}>
+            <UserForm />
+            <Button
+              variant="contained"
+              color="primary"
+              className={classes.button}
+              endIcon={<Icon>send</Icon>}
+            >
+              Send
+            </Button>
+            <TextField
+              id="outlined-multiline-static"
+              label="Comentario"
+              multiline
+              rows={4}
+              variant="outlined"
+            />
+          </Grid>
+        </Grid>
+      </Container>
     </div>
   );
 }
