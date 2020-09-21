@@ -1,6 +1,5 @@
 import React from "react";
 import UserForm from "./UserForm.jsx";
-
 import { Avatar, makeStyles } from "@material-ui/core";
 import { Grid, Container } from "@material-ui/core";
 import styled, { keyframes } from "styled-components";
@@ -9,14 +8,13 @@ import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
+
 import "react-vertical-timeline-component/style.min.css";
 import InsertEmoticonTwoToneIcon from "@material-ui/icons/InsertEmoticonTwoTone";
-import TextField from "@material-ui/core/TextField";
+
 import VideocamTwoToneIcon from "@material-ui/icons/VideocamTwoTone";
 import CodeTwoToneIcon from "@material-ui/icons/CodeTwoTone";
 import CardTravelTwoToneIcon from "@material-ui/icons/CardTravelTwoTone";
-import Button from "@material-ui/core/Button";
-import Icon from "@material-ui/core/Icon";
 
 const Bounce = styled.div`
   animation: 5s ${keyframes`${bounceIn}`} 5s;
@@ -38,14 +36,13 @@ export default function Projects() {
   const classes = useStyles();
   return (
     <div className="projects-area">
-      <Container fixed>
+      <Container>
         <Bounce>
           <h1 className="projects-title">
             "Mi nombre es Irving Rabanales y soy Software Developer <br /> Llevo
             1 año en el desarrollo de Web-Apps para comercios 100%
-            personalizadas
-            <br /> Y tengo la experiencia de 10 años en Marketing Digital
-            utilizando todas las tecnologias relevantes del mercado.
+            personalizadas Y tengo la experiencia de 10 años en Marketing
+            Digital utilizando todas las tecnologias relevantes del mercado.
           </h1>
         </Bounce>
 
@@ -60,6 +57,8 @@ export default function Projects() {
             </Bounce>
           </Grid>
         </Grid>
+      </Container>
+      <Container fixed>
         <VerticalTimeline>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
@@ -182,28 +181,7 @@ export default function Projects() {
         </VerticalTimeline>
       </Container>
 
-      <Container>
-        <Grid spacing={9} container justify="center" alignItems="center">
-          <Grid item xs={0}>
-            <UserForm />
-            <Button
-              variant="contained"
-              color="primary"
-              className={classes.button}
-              endIcon={<Icon>send</Icon>}
-            >
-              Send
-            </Button>
-            <TextField
-              id="outlined-multiline-static"
-              label="Comentario"
-              multiline
-              rows={4}
-              variant="outlined"
-            />
-          </Grid>
-        </Grid>
-      </Container>
+      <UserForm />
     </div>
   );
 }
