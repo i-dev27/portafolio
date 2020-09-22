@@ -1,26 +1,30 @@
 div.navigation {
   /* background-color: rgb(228, 228, 228); */
-  height: 120px;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 85px;
 }
 
-.navigation-sub {
-  display: flex;
-  justify-content: space-between;
-  margin-right: 5em;
-  padding: 5px;
-}
 img.logo {
-  display: flex;
-  justify-content: space-between;
-  width: 250px;
+  display: inline-block;
+  width: 150px;
   height: 150px;
   margin: 30px;
+  position: absolute;
 }
 
 a.item {
   margin-top: 30px;
   text-decoration: none;
+  color: black;
   cursor: pointer;
+  margin-right: 75px;
+}
+a.item:hover {
+  background-color: #00a86b;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
 }
 
 h1.projects-title {

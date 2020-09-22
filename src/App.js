@@ -10,11 +10,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="Logo">
-        <img
-          src="./images/Logo-Isolutions.svg"
-          alt="Logo Image"
-          className="logo"
-        />
+        <img src="./images/Logois.svg" alt="Logo Image" className="logo" />
       </div>
       <div className="navigation">
         <div className="navigation-sub">
