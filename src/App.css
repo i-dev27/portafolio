@@ -2,14 +2,18 @@ div.navigation {
   /* background-color: rgb(228, 228, 228); */
   display: flex;
   justify-content: flex-end;
-  padding-top: 85px;
+  padding-top: 100px;
+}
+
+.navigation-sub {
+  vertical-align: middle;
 }
 
 img.logo {
   display: inline-block;
-  width: 150px;
-  height: 150px;
-  margin: 30px;
+  width: 250px;
+  height: 250px;
+
   position: absolute;
 }
 
@@ -23,6 +27,8 @@ a.item {
 a.item:hover {
   background-color: #00a86b;
   border-radius: 5px;
+  border-width: 5px;
+  border-color: black;
   padding: 5px;
   color: white;
 }
