@@ -7,13 +7,13 @@ import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
-
 import "react-vertical-timeline-component/style.min.css";
 import InsertEmoticonTwoToneIcon from "@material-ui/icons/InsertEmoticonTwoTone";
-
 import VideocamTwoToneIcon from "@material-ui/icons/VideocamTwoTone";
 import CodeTwoToneIcon from "@material-ui/icons/CodeTwoTone";
 import CardTravelTwoToneIcon from "@material-ui/icons/CardTravelTwoTone";
+import InstagramIcon from "@material-ui/icons/Instagram";
+import FacebookIcon from "@material-ui/icons/Facebook";
 
 const Bounce = styled.div`
   animation: 5s ${keyframes`${bounceIn}`} 5s;
@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     height: theme.spacing(20),
   },
   stripe: {
-    backgroundColor: "grey",
+    backgroundColor: "#DCDCDC",
     height: "450px",
     marginTop: "120px",
     paddingTop: "30px",
@@ -38,12 +38,23 @@ const useStyles = makeStyles((theme) => ({
   avatar: {
     display: "flex",
     justifyContent: "center",
-    padding: "100px",
+    padding: "100px 100px 0px 100px",
   },
   intro: {
     display: "block",
     justifyContent: "center",
     padding: "50px",
+  },
+  icons: {
+    display: "flex",
+    alignItems: "flex-end",
+    justifyContent: "center",
+    padding: "0",
+    marginBottom: "100px",
+  },
+  instaIcon: {
+    color: "black",
+    margin: "0",
   },
 }));
 
@@ -79,6 +90,10 @@ export default function Projects() {
                   borderRadius="50%"
                   className={classes.large}
                 />
+              </Container>
+              <Container className={classes.icons}>
+                <InstagramIcon className={classes.instaIcon} />
+                <FacebookIcon className={classes.faceIcon} />
               </Container>
             </Bounce>
           </Grid>

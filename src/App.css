@@ -53,3 +53,8 @@ h1.title {
 .vertical-timeline::before {
   background: black;
 }
+
+img.mecoding {
+  width: 400px;
+  height: 400px;
+}
