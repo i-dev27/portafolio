@@ -20,11 +20,6 @@ import { green } from "@material-ui/core/colors";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: "50%",
-    padding: 0,
-    margin: 0,
-    display: "block",
-    justifyContent: "flexStart",
     backgroundColor: "#d3d3d3",
   },
 
@@ -33,15 +28,15 @@ const useStyles = makeStyles((theme) => ({
   },
 
   TextField: {
-    width: "36%",
+    width: "72%",
     margin: "10px",
+    padding: "0",
   },
 
-  infoBox: {
-    backgroundColor: "grey",
-    display: "flex",
-    justifyContent: "flexEnd",
-    alignItems: "center",
+  button: {
+    marginLeft: "16px",
+    paddingBottom: "10px",
+    paddingLeft: "0",
   },
 }));
 
@@ -58,9 +53,9 @@ export default function UserForm() {
   return (
     <React.Fragment>
       <Container className={classes.root}>
-        <h1>Contact us</h1>
-        <Grid>
-          <Grid>
+        <Grid container spacing={24}>
+          <Grid xs={6}>
+            <h1>Contact us</h1>
             <FormControl className={classes.margin}>
               <InputLabel htmlFor="input-with-icon-adornment">
                 Nombre
@@ -86,34 +81,32 @@ export default function UserForm() {
                 ),
               }}
             />
-          </Grid>
-        </Grid>
-        <Grid>
-          <TextField
-            className={classes.TextField}
-            id="outlined-multiline-static"
-            label="Comentario"
-            multiline
-            rows={4}
-            variant="outlined"
-          />
-          <Grid>
-            <ThemeProvider theme={theme}>
-              <Button
-                variant="contained"
-                color="primary"
-                endIcon={<Icon>send</Icon>}
-              >
-                Send
-              </Button>
-            </ThemeProvider>
-          </Grid>
-        </Grid>
-      </Container>
 
-      <Container className={classes.infoBox}>
-        <Grid direction="row" justify="flex-end" alignItems="flex-end">
-          <h1>hola</h1>
+            <TextField
+              className={classes.TextField}
+              id="outlined-multiline-static"
+              label="Comentario"
+              multiline
+              rows={4}
+              variant="outlined"
+            />
+
+            <Container className={classes.button}>
+              <ThemeProvider theme={theme}>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  endIcon={<Icon>send</Icon>}
+                >
+                  Send
+                </Button>
+              </ThemeProvider>
+            </Container>
+          </Grid>
+
+          <Grid xs={6}>
+            <h2>Social Media</h2>
+          </Grid>
         </Grid>
       </Container>
     </React.Fragment>

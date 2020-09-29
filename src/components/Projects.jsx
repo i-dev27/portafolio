@@ -1,7 +1,6 @@
 import React from "react";
 import UserForm from "./UserForm.jsx";
-import { Avatar, makeStyles } from "@material-ui/core";
-import { Grid, Container } from "@material-ui/core";
+import { Avatar, makeStyles, Grid, Container } from "@material-ui/core";
 import styled, { keyframes } from "styled-components";
 import { bounceIn } from "react-animations";
 import {
@@ -27,8 +26,24 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   large: {
-    width: theme.spacing(7),
-    height: theme.spacing(7),
+    width: theme.spacing(20),
+    height: theme.spacing(20),
+  },
+  stripe: {
+    backgroundColor: "grey",
+    height: "450px",
+    marginTop: "120px",
+    paddingTop: "30px",
+  },
+  avatar: {
+    display: "flex",
+    justifyContent: "center",
+    padding: "100px",
+  },
+  intro: {
+    display: "block",
+    justifyContent: "center",
+    padding: "50px",
   },
 }));
 
@@ -36,24 +51,35 @@ export default function Projects() {
   const classes = useStyles();
   return (
     <div className="projects-area">
-      <Container>
-        <Bounce>
-          <h1 className="projects-title">
-            "Mi nombre es Irving Rabanales y soy Software Developer <br /> Llevo
-            1 año en el desarrollo de Web-Apps para comercios 100%
-            personalizadas Y tengo la experiencia de 10 años en Marketing
-            Digital utilizando todas las tecnologias relevantes del mercado.
-          </h1>
-        </Bounce>
-
-        <Grid spacing={1} container justify="flex-end" alignItems="center">
-          <Grid item xs={1}>
+      <Container className={classes.stripe}>
+        <Grid container spacing={24}>
+          <Grid item xs={6}>
             <Bounce>
-              <Avatar
-                alt="Irving Morales"
-                src="./images/avatar.jpg"
-                className={classes.large}
-              />
+              <Container className={classes.intro}>
+                <h1>
+                  "Mi nombre es Irving Rabanales y soy Software Developer:
+                </h1>{" "}
+                <br />
+                <p>
+                  Llevo 1 año en el desarrollo de Web-Apps para comercios 100%
+                  personalizadas Y tengo la experiencia de 10 años en Marketing
+                  Digital utilizando todas las tecnologias relevantes del
+                  mercado.
+                </p>
+              </Container>
+            </Bounce>
+          </Grid>
+
+          <Grid item xs={6}>
+            <Bounce>
+              <Container className={classes.avatar}>
+                <Avatar
+                  alt="Irving Morales"
+                  src="./images/avatar.jpg"
+                  borderRadius="50%"
+                  className={classes.large}
+                />
+              </Container>
             </Bounce>
           </Grid>
         </Grid>
