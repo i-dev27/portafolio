@@ -15,6 +15,7 @@ import CardTravelTwoToneIcon from "@material-ui/icons/CardTravelTwoTone";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import FacebookIcon from "@material-ui/icons/Facebook";
 
+
 const Bounce = styled.div`
   animation: 5s ${keyframes`${bounceIn}`} 5s;
 `;

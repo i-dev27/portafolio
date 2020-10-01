@@ -1,10 +1,13 @@
 import React from "react";
 import { makeStyles, Grid, Container } from "@material-ui/core";
+import banneragency from "../public/images/banneragency.png";
 
 const useStyles = makeStyles((theme) => ({
   box: {
     marginTop: "200px",
+    height: "450px",
   },
+
   intro2: {
     display: "flex",
     justifyContent: "center",
@@ -42,6 +45,9 @@ function Agency(props) {
           </Grid>
         </Grid>
       </Container>
+      <div styles={{ backgroundImage: `url(${banneragency})` }}>
+        <h1>This is red car</h1>
+      </div>
     </React.Fragment>
   );
 }
