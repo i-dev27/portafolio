@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap");
+
 div.navigation {
   /* background-color: rgb(228, 228, 228); */
   display: flex;
@@ -58,7 +60,13 @@ img.mecoding {
   width: 400px;
   height: 400px;
 }
-/* 
-.box2 {
-  background-image: url("../public/images/banneragency.png");
-} */
+
+.text-agency-intro {
+  font-family: "Comfortaa", cursive;
+}
+
+.text-agency {
+  text-align: center;
+  padding-top: 200px;
+  font-family: "Comfortaa", cursive;
+}

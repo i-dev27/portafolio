@@ -1,6 +1,6 @@
 import React from "react";
 import UserForm from "./UserForm.jsx";
-import { Avatar, makeStyles, Grid, Container } from "@material-ui/core";
+import { Avatar, makeStyles, Grid, Container, Paper } from "@material-ui/core";
 import styled, { keyframes } from "styled-components";
 import { bounceIn } from "react-animations";
 import {
@@ -14,7 +14,6 @@ import CodeTwoToneIcon from "@material-ui/icons/CodeTwoTone";
 import CardTravelTwoToneIcon from "@material-ui/icons/CardTravelTwoTone";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import FacebookIcon from "@material-ui/icons/Facebook";
-
 
 const Bounce = styled.div`
   animation: 5s ${keyframes`${bounceIn}`} 5s;
@@ -31,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     height: theme.spacing(20),
   },
   stripe: {
-    backgroundColor: "#DCDCDC",
+    backgroundColor: "black",
     height: "450px",
     marginTop: "120px",
     paddingTop: "30px",
@@ -62,44 +61,47 @@ const useStyles = makeStyles((theme) => ({
 export default function Projects() {
   const classes = useStyles();
   return (
-    <div className="projects-area">
+    <React.Fragment>
       <Container className={classes.stripe}>
-        <Grid container spacing={24}>
-          <Grid item xs={6}>
-            <Bounce>
-              <Container className={classes.intro}>
-                <h1>
-                  "Mi nombre es Irving Rabanales y soy Software Developer:
-                </h1>{" "}
-                <br />
-                <p>
-                  Llevo 1 año en el desarrollo de Web-Apps para comercios 100%
-                  personalizadas Y tengo la experiencia de 10 años en Marketing
-                  Digital utilizando todas las tecnologias relevantes del
-                  mercado.
-                </p>
-              </Container>
-            </Bounce>
-          </Grid>
+        <Paper elevation={0} className={classes.paperintro}>
+          <Grid container spacing={24}>
+            <Grid item xs={6}>
+              <Bounce>
+                <Container className={classes.intro}>
+                  <h1>
+                    "Mi nombre es Irving Rabanales y soy Software Developer:
+                  </h1>{" "}
+                  <br />
+                  <p>
+                    Llevo 1 año en el desarrollo de Web-Apps para comercios 100%
+                    personalizadas Y tengo la experiencia de 10 años en
+                    Marketing Digital utilizando todas las tecnologias
+                    relevantes del mercado.
+                  </p>
+                </Container>
+              </Bounce>
+            </Grid>
 
-          <Grid item xs={6}>
-            <Bounce>
-              <Container className={classes.avatar}>
-                <Avatar
-                  alt="Irving Morales"
-                  src="./images/avatar.jpg"
-                  borderRadius="50%"
-                  className={classes.large}
-                />
-              </Container>
-              <Container className={classes.icons}>
-                <InstagramIcon className={classes.instaIcon} />
-                <FacebookIcon className={classes.faceIcon} />
-              </Container>
-            </Bounce>
+            <Grid item xs={6}>
+              <Bounce>
+                <Container className={classes.avatar}>
+                  <Avatar
+                    alt="Irving Morales"
+                    src="./images/avatar.jpg"
+                    borderRadius="50%"
+                    className={classes.large}
+                  />
+                </Container>
+                <Container className={classes.icons}>
+                  <InstagramIcon className={classes.instaIcon} />
+                  <FacebookIcon className={classes.faceIcon} />
+                </Container>
+              </Bounce>
+            </Grid>
           </Grid>
-        </Grid>
+        </Paper>
       </Container>
+
       <Container fixed>
         <VerticalTimeline>
           <VerticalTimelineElement
@@ -224,6 +226,6 @@ export default function Projects() {
       </Container>
 
       <UserForm />
-    </div>
+    </React.Fragment>
   );
 }
