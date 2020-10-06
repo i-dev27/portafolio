@@ -29,12 +29,19 @@ const useStyles = makeStyles((theme) => ({
     width: theme.spacing(20),
     height: theme.spacing(20),
   },
-  stripe: {
-    backgroundColor: "black",
+
+  paperintro: {
+    backgroundImage: `url(${"./images/banner1.png"})`,
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+    backgroundAttachment: "fixed",
     height: "450px",
+    display: "block",
     marginTop: "120px",
     paddingTop: "30px",
   },
+
   avatar: {
     display: "flex",
     justifyContent: "center",
@@ -62,44 +69,42 @@ export default function Projects() {
   const classes = useStyles();
   return (
     <React.Fragment>
-      <Container className={classes.stripe}>
-        <Paper elevation={0} className={classes.paperintro}>
-          <Grid container spacing={24}>
-            <Grid item xs={6}>
-              <Bounce>
-                <Container className={classes.intro}>
-                  <h1>
-                    "Mi nombre es Irving Rabanales y soy Software Developer:
-                  </h1>{" "}
-                  <br />
-                  <p>
-                    Llevo 1 año en el desarrollo de Web-Apps para comercios 100%
-                    personalizadas Y tengo la experiencia de 10 años en
-                    Marketing Digital utilizando todas las tecnologias
-                    relevantes del mercado.
-                  </p>
-                </Container>
-              </Bounce>
-            </Grid>
-
-            <Grid item xs={6}>
-              <Bounce>
-                <Container className={classes.avatar}>
-                  <Avatar
-                    alt="Irving Morales"
-                    src="./images/avatar.jpg"
-                    borderRadius="50%"
-                    className={classes.large}
-                  />
-                </Container>
-                <Container className={classes.icons}>
-                  <InstagramIcon className={classes.instaIcon} />
-                  <FacebookIcon className={classes.faceIcon} />
-                </Container>
-              </Bounce>
-            </Grid>
+      <Container className={classes.paperintro}>
+        <Grid container spacing={24}>
+          <Grid item xs={6}>
+            <Bounce>
+              <Container className={classes.intro}>
+                <h1 className="title-intro">
+                  "Mi nombre es Irving Rabanales y soy Software Developer:
+                </h1>{" "}
+                <br />
+                <p className="paragraph-intro">
+                  Llevo 1 año en el desarrollo de Web-Apps para comercios 100%
+                  personalizadas Y tengo la experiencia de 10 años en Marketing
+                  Digital utilizando todas las tecnologias relevantes del
+                  mercado.
+                </p>
+              </Container>
+            </Bounce>
           </Grid>
-        </Paper>
+
+          <Grid item xs={6}>
+            <Bounce>
+              <Container className={classes.avatar}>
+                <Avatar
+                  alt="Irving Morales"
+                  src="./images/avatar.jpg"
+                  borderRadius="50%"
+                  className={classes.large}
+                />
+              </Container>
+              <Container className={classes.icons}>
+                <InstagramIcon className={classes.instaIcon} />
+                <FacebookIcon className={classes.faceIcon} />
+              </Container>
+            </Bounce>
+          </Grid>
+        </Grid>
       </Container>
 
       <Container fixed>

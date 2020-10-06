@@ -19,8 +19,13 @@ import {
 import { green } from "@material-ui/core/colors";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    backgroundColor: "#d3d3d3",
+  backgroundForm: {
+    backgroundImage: `url(${"./images/bannerform.png"})`,
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+    height: "450px",
+    display: "block",
   },
 
   margin: {
@@ -52,10 +57,10 @@ export default function UserForm() {
   const classes = useStyles();
   return (
     <React.Fragment>
-      <Container className={classes.root}>
+      <Container className={classes.backgroundForm}>
         <Grid container spacing={24}>
           <Grid xs={6}>
-            <h1>Contact us</h1>
+            <h1 className="form-title">Contact us</h1>
             <FormControl className={classes.margin}>
               <InputLabel htmlFor="input-with-icon-adornment">
                 Nombre

@@ -35,16 +35,12 @@ a.item:hover {
   color: white;
 }
 
-h1.projects-title {
-  padding-top: 130px;
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
+.title-intro {
+  font-family: "Comfortaa", cursive;
 }
 
-h1.title {
-  display: flex;
-  justify-content: center;
+.paragraph-intro {
+  font-family: "Comfortaa", cursive;
 }
 
 .MuiCard-root {
@@ -70,3 +66,9 @@ img.mecoding {
   padding-top: 200px;
   font-family: "Comfortaa", cursive;
 }
+
+/* @media screen and (max-width: 500px) {
+  img.logo {
+    width: 100px;
+  }
+} */

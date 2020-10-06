@@ -11,7 +11,6 @@ const useStyles = makeStyles((theme) => ({
   box2: {
     backgroundImage: `url(${"./images/banneragency.png"})`,
     backgroundRepeat: "no-repeat",
-
     backgroundPosition: "center",
     backgroundSize: "cover",
     height: "450px",
