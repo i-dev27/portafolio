@@ -30,12 +30,7 @@ function Contact(props) {
                 tecnologia bien con un boom total ayudarte a darle esa
                 personificacion tecnologica.
               </p>
-              <h2>"I" solutions</h2>
-              <p>
-                Aqui es donde mi compañia te podra dar todo lo necesario para
-                que tu negocio triunfe en el mercado tecnologico con asesoria
-                personalizada.
-              </p>
+              
             </Card>
           </Grid>
         </Grid>

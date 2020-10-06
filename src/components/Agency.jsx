@@ -1,6 +1,12 @@
 import React from "react";
 import { makeStyles, Grid, Container } from "@material-ui/core";
 import { Paper } from "@material-ui/core";
+import { headShake } from "react-animations";
+import styled, { keyframes } from "styled-components";
+
+const HeadShake = styled.div`
+  animation: 4s ${keyframes`${headShake}`} 4s;
+`;
 
 const useStyles = makeStyles((theme) => ({
   box: {
@@ -35,21 +41,23 @@ function Agency(props) {
         <Grid container spacing={24}>
           <Grid xs={6}>
             <Container className={classes.intro2}>
-              <h2 className="text-agency-intro">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Inventore numquam neque deleniti, eligendi molestias, cumque aut
-                quisquam soluta possimus corporis quibusdam amet repellat
-                exercitationem dolore voluptate est at perferendis accusamus!
-              </h2>
+              <p className="text-agency">
+                <h1>"I Solutions"</h1>
+                Aqui es donde mi compañia te podra dar todo lo necesario para
+                que tu negocio triunfe en el mercado tecnologico con asesoria
+                personalizada.
+              </p>
             </Container>
           </Grid>
           <Grid xs={6}>
             <Container className={classes.img}>
-              <img
-                className="mecoding"
-                src="./images/mecoding.png"
-                alt="mecoding"
-              />
+              <HeadShake>
+                <img
+                  className="mecoding"
+                  src="./images/mecoding.png"
+                  alt="mecoding"
+                />
+              </HeadShake>
             </Container>
           </Grid>
         </Grid>
