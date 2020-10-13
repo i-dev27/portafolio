@@ -116,7 +116,7 @@ export default function Projects() {
               color: "#fff",
             }}
             contentArrowStyle={{
-              borderRight: "7px solid  rgb(105, 105, 105)",
+              borderRight: "7px solid  rgb(0, 0, 0)",
             }}
             date="2011 - present"
             iconStyle={{
@@ -127,10 +127,13 @@ export default function Projects() {
             }}
             icon={<InsertEmoticonTwoToneIcon fontSize="large" />}
           >
+
+            <img className="imagemk" src="../images/digitalm.png" alt="imagemk" />
             <h3 className="vertical-timeline-element-title">Digital Creator</h3>
             <h4 className="vertical-timeline-element-subtitle">
               Antigua Guatemala, Sacatepequez
             </h4>
+            
             <p>
               Te Ofrezco los mejores servicios de tecnologia, desde la creacion
               de tu sitio Web, WebApp, Marketing digital, Manejo de
@@ -144,7 +147,7 @@ export default function Projects() {
               color: "#fff",
             }}
             contentArrowStyle={{
-              borderRight: "7px solid  rgb(105, 105, 105)",
+              borderRight: "7px solid  rgb(0, 0, 0)",
             }}
             date="2020 - 2020"
             iconStyle={{
@@ -155,6 +158,7 @@ export default function Projects() {
             }}
             icon={<VideocamTwoToneIcon />}
           >
+            <img className="sistema" src="../images/sistema.png" alt="sistema" />
             <h3 className="vertical-timeline-element-title">
               Marketing Promoter and Video Business Creation of Sistema by OG!
             </h3>
@@ -171,11 +175,11 @@ export default function Projects() {
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{
-              background: "rgb(169,169,169",
+              background: "#00a86b",
               color: "#fff",
             }}
             contentArrowStyle={{
-              borderRight: "7px solid  rgb(105, 105, 105)",
+              borderRight: "7px solid  rgb(0, 0, 0)",
             }}
             date="2020 - 2020"
             iconStyle={{
@@ -186,6 +190,8 @@ export default function Projects() {
             }}
             icon={<CodeTwoToneIcon />}
           >
+            <img className="mishopin" src="../images/mishopin.png" alt="mishopin" />
+
             <h3 className="vertical-timeline-element-title">
               Development at Mishopin Store
             </h3>
@@ -204,17 +210,19 @@ export default function Projects() {
               color: "#fff",
             }}
             contentArrowStyle={{
-              borderRight: "7px solid  rgb(105, 105, 105)",
+              borderRight: "7px solid  rgb(0, 0, 0)",
             }}
             date="2009 - 2020"
             iconStyle={{
               background: "radial-gradient(#00a86b, #000000)",
               boxShadow:
-                "0 0 0 4px #0f0f0f,inset 0 2px 0 rgba(0,0,0,.08),0 3px 0 4px rgba(0,0,0,.05)",
+              "0 0 0 4px #0f0f0f,inset 0 2px 0 rgba(0,0,0,.08),0 3px 0 4px rgba(0,0,0,.05)",
               color: "#fff",
             }}
             icon={<CardTravelTwoToneIcon />}
           >
+        <img className="mb" src="../images/mb.png" alt="mb" />
+
             <h3 className="vertical-timeline-element-title">
               Manager of Hostel Maison Bougainvillea{" "}
             </h3>
