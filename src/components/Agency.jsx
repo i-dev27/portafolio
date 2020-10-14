@@ -3,6 +3,8 @@ import { makeStyles, Grid, Container } from "@material-ui/core";
 import { Paper } from "@material-ui/core";
 import { headShake } from "react-animations";
 import styled, { keyframes } from "styled-components";
+import Contact from "../components/UserForm";
+import UserForm from "../components/UserForm";
 
 const HeadShake = styled.div`
   animation: 4s ${keyframes`${headShake}`} 4s;
@@ -18,8 +20,18 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: `url(${"./images/banneragency.png"})`,
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
+    backgroundAttachment: "fixed",
     backgroundSize: "cover",
     height: "450px",
+    display: "block",
+  },
+
+  box3: {
+    backgroundImage: `url(${"./images/banneragency2.png"})`,
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "3% 75%",
+    backgroundSize: "cover",
+    height: "650px",
     display: "block",
   },
 
@@ -68,6 +80,11 @@ function Agency(props) {
           "We have the best solution for your company"
         </h1>
       </Paper>
+      <Paper elevation={0} className={classes.box3}>
+        
+      </Paper>
+      <UserForm/>
+
     </React.Fragment>
   );
 }
