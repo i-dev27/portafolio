@@ -3,7 +3,6 @@ import { makeStyles, Grid, Container } from "@material-ui/core";
 import { Paper } from "@material-ui/core";
 import { headShake } from "react-animations";
 import styled, { keyframes } from "styled-components";
-import Contact from "../components/UserForm";
 import UserForm from "../components/UserForm";
 
 const HeadShake = styled.div`

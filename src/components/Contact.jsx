@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Grid, Container, makeStyles } from "@material-ui/core";
+import UserForm from "./UserForm.jsx"
 
 const useStyles = makeStyles((theme) => ({
   box3: {
@@ -35,6 +36,8 @@ function Contact(props) {
           </Grid>
         </Grid>
       </Container>
+        <UserForm />
+
     </React.Fragment>
   );
 }
