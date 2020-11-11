@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundAttachment: "fixed",
     height: "450px",
     display: "block",
-    marginTop: "120px",
+    marginTop: "1px",
     paddingTop: "30px",
   },
 

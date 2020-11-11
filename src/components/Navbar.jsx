@@ -21,12 +21,16 @@ import Menu from '@material-ui/core/Menu';
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
+      
+      
     },
     menuButton: {
       marginRight: theme.spacing(2),
+      
     },
     title: {
       flexGrow: 1,
+    
     },
   }));
   
@@ -50,52 +54,43 @@ const useStyles = makeStyles((theme) => ({
             };
           
             return (
+                
               <div className={classes.root}>
-                <FormGroup>
-                  <FormControlLabel
-                    control={<Switch checked={auth} onChange={handleChange} aria-label="login switch" />}
-                    label={auth ? 'Logout' : 'Login'}
-                  />
-                </FormGroup>
-                <AppBar position="static">
+                <AppBar color="primary" position="static">
                   <Toolbar>
-                    <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-                      <MenuIcon />
-                    </IconButton>
-                    <Typography variant="h6" className={classes.title}>
-                      Photos
-                    </Typography>
-                    {auth && (
-                      <div>
-                        <IconButton
-                          aria-label="account of current user"
-                          aria-controls="menu-appbar"
-                          aria-haspopup="true"
-                          onClick={handleMenu}
-                          color="inherit"
-                        >
-                          <AccountCircle />
-                        </IconButton>
-                        <Menu
-                          id="menu-appbar"
-                          anchorEl={anchorEl}
-                          anchorOrigin={{
-                            vertical: 'top',
-                            horizontal: 'right',
-                          }}
-                          keepMounted
-                          transformOrigin={{
-                            vertical: 'top',
-                            horizontal: 'right',
-                          }}
-                          open={open}
-                          onClose={handleClose}
-                        >
-                          <MenuItem onClick={handleClose}>Profile</MenuItem>
-                          <MenuItem onClick={handleClose}>My account</MenuItem>
-                        </Menu>
-                      </div>
-                    )}
+                 <Typography  className={classes.title}>
+                <img src="./images/Logois.svg" alt="Logo Image" className="logo" />
+                  </Typography>
+            <div>
+              <IconButton
+                edge="start" className={classes.menuButton} 
+                color="inherit" 
+                aria-label="menu"
+                onClick={handleMenu}
+                color="inherit"
+              >
+                <MenuIcon />
+              </IconButton>
+              <Menu
+                id="menu-appbar"
+                anchorEl={anchorEl}
+                anchorOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                open={open}
+                onClose={handleClose}
+              >
+                <MenuItem onClick={handleClose}>Profile</MenuItem>
+                <MenuItem onClick={handleClose}>My account</MenuItem>
+              </Menu>
+            </div>
+          
                   </Toolbar>
                 </AppBar>
 
