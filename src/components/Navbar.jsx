@@ -3,37 +3,34 @@ import React from 'react';
 import Projects from "./Projects.jsx";
 import Agency from "./Agency";
 import Contact from "./Contact.jsx";
-import { Link, BrowserRouter, Route } from "react-router-dom";
+import { Link, BrowserRouter, Route, Switch } from "react-router-dom";
 import { RemoveCircle } from '@material-ui/icons';
-import { makeStyles } from '@material-ui/core/styles';
+import { createMuiTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import AccountCircle from '@material-ui/icons/AccountCircle';
-import Switch from '@material-ui/core/Switch';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormGroup from '@material-ui/core/FormGroup';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
+import { red } from '@material-ui/core/colors';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme) => ({ 
     root: {
-      flexGrow: 1,
-      
-      
+      flexGrow: 1, 
     },
+
     menuButton: {
-      marginRight: theme.spacing(2),
-      
+      marginRight: theme.spacing(2), 
     },
+
     title: {
       flexGrow: 1,
-    
     },
   }));
-  
 
  function Navbar() {
     const classes = useStyles();
@@ -56,7 +53,8 @@ const useStyles = makeStyles((theme) => ({
             return (
                 
               <div className={classes.root}>
-                <AppBar color="primary" position="static">
+               
+                <AppBar style={{background: '#00a86b'}}  position="static">
                   <Toolbar>
                  <Typography  className={classes.title}>
                 <img src="./images/Logois.svg" alt="Logo Image" className="logo" />
@@ -71,6 +69,7 @@ const useStyles = makeStyles((theme) => ({
               >
                 <MenuIcon />
               </IconButton>
+
               <Menu
                 id="menu-appbar"
                 anchorEl={anchorEl}
@@ -86,16 +85,28 @@ const useStyles = makeStyles((theme) => ({
                 open={open}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
-                <MenuItem onClick={handleClose}>My account</MenuItem>
+                  <BrowserRouter>
+                <MenuItem onClick={handleClose} component={Link} to="/"> Projects</MenuItem>
+                <MenuItem onClick={handleClose} component={Link} to="/Agency">Agency</MenuItem>
+                <MenuItem onClick={handleClose} component={Link} to="/Contact">Contact</MenuItem>
+            
+                {/* <Switch>
+                    <Route exact path="/" component={Projects} />
+                    <Route path="/Agency" component={Agency} />
+                    <Route path="/Contact" component={Contact} />
+                    </Switch> */}
+                    </BrowserRouter> 
               </Menu>
+
             </div>
-          
-                  </Toolbar>
-                </AppBar>
+              </Toolbar>
+               </AppBar>
 
 
-
+                  
+                   
+                 
+                
               </div>
 
 
